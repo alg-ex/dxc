@@ -1,0 +1,63 @@
+<!--
+  Generated template for the EmployeeDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Employee Detail</ion-title>
+        <ion-buttons *ngIf="mode != 0" end>
+            <button ion-button (click)="editEmployee()" icon-only>
+                <ion-icon name="create"></ion-icon>
+            </button>
+            <button ion-button color="danger" (click)="removeEmployee()" icon-only>
+                <ion-icon name="trash"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form>
+        <ion-list>
+            <ion-item *ngIf="mode != 0">
+                <ion-label position="stacked">
+                    Id
+                </ion-label>
+                <ion-input type="number" name="id" [(ngModel)]="employee.id" readonly>
+                </ion-input>
+            </ion-item>
+            <ion-item *ngIf="mode != 0">
+                <ion-img [src]="employee.profile_image"></ion-img>
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">
+                    Name
+                </ion-label>
+                <ion-input type="string" name="employee_name" [(ngModel)]="employee.employee_name" readonly="{{isReadonly}}">
+                </ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">
+                    Salary
+                </ion-label>
+                <ion-input type="number" name="employee_salary" [(ngModel)]="employee.employee_salary" readonly="{{isReadonly}}">
+                </ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">
+                    Age
+                </ion-label>
+                <ion-input type="number" name="employee_age" [(ngModel)]="employee.employee_age" readonly="{{isReadonly}}">
+                </ion-input>
+            </ion-item>
+        </ion-list>
+        <button *ngIf="mode == 0" ion-button type="submit" block (click)="create()">Save</button>
+        <button *ngIf="mode == 2" ion-button type="submit" block (click)="update()">Save</button>
+        <button ion-button type="button" color="secondary" block (click)="return()">Return</button>
+    </form>
+</ion-content>

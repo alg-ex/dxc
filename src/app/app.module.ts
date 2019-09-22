@@ -5,26 +5,37 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HTTP } from '@ionic-native/http'
+import { EmployeePage } from '../pages/employee/employee';
+import { EmployeeProvider } from '../providers/employee/employee';
+import { EmployeeDetailPage } from '../pages/employee-detail/employee-detail';
+import { UtiltiesProvider } from '../providers/utilties/utilties';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    EmployeePage,
+    EmployeeDetailPage
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    EmployeePage,
+    EmployeeDetailPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HTTP,
+    EmployeeProvider,
+    UtiltiesProvider
   ]
 })
 export class AppModule {}
