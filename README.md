@@ -6,8 +6,8 @@ Trabaja con los servicios que se nos suministra en:
 
 http://dummy.restapiexample.com/
 
-El proyecto está realizado en ionic 3
-para trabajar con él además de las herramientas necesarias debemos tener instalado node, debemos:
+El proyecto está realizado en ionic 3, angular...
+para trabajar con él además de las herramientas necesarias debemos:
 
 - Descargar los archivos o clonar el repositorio
 - Abrir la consola de comandos, navegar a la carpeta y ejecutar npm install
