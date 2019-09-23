@@ -23,7 +23,7 @@ Una vez tengamos cargado el listado general solo tendremos que pulsar sobre un r
 2) Se ha añadido el poder crear, editar y borrar registros de empleados de diferentes formas:
 
 Desde el listado de registros, pulsar el "+" para añadir un nuevo registro y para editar/borrar un registro existente deslizar hacia la izquierda el registro para que aparezcan los botones opcionales
-O desde la misma pantalla de detalle si hemos abierto los detalles de un registro para consultarlos, simplemente pulsando los botones de arriba a la derecha
+O si hemos abierto los detalles de un registro para consultarlos, podemos hacerlo desde la misma pantalla de detalle, simplemente pulsando los botones de arriba a la derecha
 
 3) Por último como a veces nos interesará tener el registro local actualizado y otras no... por ejemplo queremos trabajar en varios registros seguidos antes de refrescar pues para no estar ejecutando refrescos continuamente se ha implementado de forma diferente las acciones al terminar de trabajar con un registro entonces en la aplicación :
 
