@@ -1,12 +1,12 @@
 ### :point_right: This starter repo has moved to the [ionic-team/starters](https://github.com/ionic-team/starters/tree/master/ionic-angular/official/blank) repo! :point_left:
 
-La aplicación se utiliza para crear, modificiar, listar y borrar los empleados de una empresa en un registro.
+La aplicación se utiliza para crear, modificiar, listar y borrar los empleados de una empresa en un registro, en este caso
 
-Trabaja con los servicios que se nos suministra en:
+trabajamos con los servicios que nos suministra:
 
 http://dummy.restapiexample.com/
 
-El proyecto está realizado en ionic 3, angular...
+El proyecto está realizado en Ionic 3, Angular...
 para trabajar con él además de las herramientas necesarias debemos:
 
 - Descargar los archivos o clonar el repositorio
