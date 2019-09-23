@@ -12,7 +12,7 @@ para trabajar con él además de las herramientas necesarias debemos:
 - Descargar los archivos o clonar el repositorio
 - Abrir la consola de comandos, navegar a la carpeta y ejecutar npm install
 
-se han añadido las siguientes funcionalidades
+Se han añadido las siguientes funcionalidades
 
 La aplicación tiene dos diferentes metodos para obtener el listado general: -Para realizar la carga inicial se ha utilizado Angular en el método. -Se puede realizar el refresco del listado cuando se desee simplemente desplazando el listado hacia abajo... pero en esta ocasión se ha utilizado los plugin nativos HTTP de Ionic para realizar la petición, (el inconveniente que tiene es que tiene que probarse en un movil para que se vea el funcionamiento pero si lo instalan lo verán funcionando...) Lo he hecho así para dejar constancia de las dos formas de realizar peticiones.
 2-3) Se ha añadido el poder crear, editar y borrar registros de empleados de diferentes formas:
