@@ -21,8 +21,9 @@ Desde el listado de registros, pulsar el "+" para añadir un nuevo registro y pa
 O desde la misma pantalla de detalle si hemos abierto los detalles de un registro para consultarlos, simplemente pulsando los botones de arriba a la derecha
 Por último se ha implementado de forma diferente las acciones al terminar de trabajar con un registro ya que:
 
-Cuando se cree/borre un registro se haga una petición de refresco y recargue el listado al volver.
+- Cuando se cree/borre un registro se haga una petición de refresco y recargue el listado al volver.
 
-Pero cuando se editen/actualicen datos aunque se haga la petición igual al back y quede grabado allí, al regresar que no haga una petición de refresco de listado al back sino localmente se actualicen los datos nuevos en la lista del dispositivo que disponemos.. ya que si quieren pueden recargar la lista completa cuando deseen simplemente tirando hacia debajo como he indicado antes...
+Pero como a veces no nos interesa tener el listado completo actualizado porque queremos trabajar en varios seguidos para no estar ejecutando refrescos continuamente se ha implementado que:
 
- Add a custom footer
+-Cuando se editen/actualicen datos solo se actualice el listado general local... aunque se haga la petición igual al back y quede grabado allí, al regresar que no haga una petición de refresco de listado al back sino localmente se actualicen los datos nuevos en la lista del dispositivo que disponemos.. ya que si quieren pueden recargar la lista completa cuando deseen simplemente desplazando hacia abajo tal y como he indicado antes...
+
