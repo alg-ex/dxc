@@ -1,4 +1,4 @@
-APLICACIÓN REGISTRO EMPLEADOS
+APLICACIÓN REGISTRO DE EMPLEADOS
 
 La aplicación se utiliza para crear, modificiar, listar y borrar los empleados de una empresa en un registro, en este caso
 
