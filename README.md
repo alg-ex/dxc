@@ -1,4 +1,4 @@
-### :point_right: This starter repo has moved to the [ionic-team/starters](https://github.com/ionic-team/starters/tree/master/ionic-angular/official/blank) repo! :point_left:
+APLICACIÓN REGISTRO EMPLEADOS
 
 La aplicación se utiliza para crear, modificiar, listar y borrar los empleados de una empresa en un registro, en este caso
 
