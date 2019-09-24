@@ -106,7 +106,7 @@ export class EmployeeDetailPage {
       },
       err => {  
         console.log('Error', err);
-        let mensaje = "No se han podido actualizar los datos del empleado, por favor, intentelo más tarde"
+        let mensaje = "No se ha podido crear el registro del empleado, por favor, intentelo más tarde"
         this.utiltiesProvider.presentToast(mensaje);
         this.utiltiesProvider.loading.dismiss();
       }
@@ -160,7 +160,7 @@ export class EmployeeDetailPage {
     this.employeeProvider.deleteEmployee(this.employee.id).subscribe(
       data => {
         if(data.success){
-          let mensaje = "Registro borrado"
+          let mensaje = "Registro borrado correctamente"
           this.utiltiesProvider.presentToast(mensaje);
           
           this.utiltiesProvider.loading.dismiss();
@@ -169,7 +169,7 @@ export class EmployeeDetailPage {
       },
       err => {  
         console.log('Error', err);
-        let mensaje = "No se ha podido borrar el registro"
+        let mensaje = "No se ha podido borrar el registro, por favor, intentelo más tarde"
         this.utiltiesProvider.presentToast(mensaje);
         this.utiltiesProvider.loading.dismiss();
       }
