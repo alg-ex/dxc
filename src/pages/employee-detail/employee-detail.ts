@@ -58,6 +58,8 @@ export class EmployeeDetailPage {
     if (!target.closest(".modalContent")){
       event.preventDefault();
       document.querySelector("input").focus();
+      //this.E1Input.setFocus(); 
+      //console.log(event);
     }
   }
 
