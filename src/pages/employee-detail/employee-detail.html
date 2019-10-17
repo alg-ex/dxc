@@ -22,7 +22,7 @@
 
 
 <ion-content padding>
-    <form>
+    <form #formulario class="modalContent">
         <ion-list>
             <ion-item *ngIf="mode != 0">
                 <ion-label position="stacked">
@@ -38,7 +38,7 @@
                 <ion-label position="stacked">
                     Name
                 </ion-label>
-                <ion-input type="string" name="employee_name" [(ngModel)]="employee.employee_name" readonly="{{isReadonly}}">
+                <ion-input #firstInput type="string" name="employee_name" [(ngModel)]="employee.employee_name" readonly="{{isReadonly}}">
                 </ion-input>
             </ion-item>
             <ion-item>
@@ -58,6 +58,6 @@
         </ion-list>
         <button *ngIf="mode == 0" ion-button type="submit" block (click)="create()">Save</button>
         <button *ngIf="mode == 2" ion-button type="submit" block (click)="update()">Save</button>
-        <button ion-button type="button" color="secondary" block (click)="return()">Return</button>
+        <button id="returnB" ion-button type="button" color="secondary" block (click)="return()">Return</button>
     </form>
 </ion-content>

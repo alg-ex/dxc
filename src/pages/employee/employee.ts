@@ -15,9 +15,13 @@ import { EmployeeDetailPage } from '../employee-detail/employee-detail';
 @Component({
   selector: 'page-employee',
   templateUrl: 'employee.html',
+  host: {
+    '(document:focusin)': 'onFocusIn($event)'
+  }
 })
 export class EmployeePage {
 
+  modalActive=false;
   employeeList: Employee[];
 
   constructor(
@@ -26,6 +30,14 @@ export class EmployeePage {
     public employeeProvider: EmployeeProvider,
     public modalCtrl: ModalController,
     public utiltiesProvider: UtiltiesProvider) {
+  }
+
+  onFocusIn(event:KeyboardEvent) {
+    let target = event.target as HTMLInputElement;
+    if (this.modalActive === true && !target.closest(".modalContent")){
+      event.preventDefault();
+      document.querySelector("input").focus();
+    }
   }
 
   ionViewDidLoad() {
@@ -83,8 +95,11 @@ export class EmployeePage {
     let modal = this.modalCtrl.create(EmployeeDetailPage, {mode: mode , index: index, employee: employee});
     
     modal.present();
+    this.modalActive=true;
+    //document.getElementsByTagName('ng-component')[0].setAttribute('tabIndex','-1');
 
     modal.onDidDismiss(returnData =>{
+      this.modalActive=false;
       if (returnData){
         if(returnData.mode == 2)
           this.employeeList[returnData.index] = returnData.employee as Employee;

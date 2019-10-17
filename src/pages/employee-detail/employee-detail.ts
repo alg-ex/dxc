@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { IonicPage, NavParams, ViewController } from 'ionic-angular';
 import { UtiltiesProvider } from '../../providers/utilties/utilties';
 import { Employee } from '../../models/employee';
@@ -14,8 +14,13 @@ import { EmployeeProvider } from '../../providers/employee/employee';
 @Component({
   selector: 'page-employee-detail',
   templateUrl: 'employee-detail.html',
+  /*host: {
+    '(document:keydown)': 'handleKeyboardEvent($event)'
+  }*/
 })
 export class EmployeeDetailPage {
+
+  @ViewChild('firstInput') E1Input: ElementRef;
 
   index: number;
   employee: Employee;
@@ -43,8 +48,18 @@ export class EmployeeDetailPage {
           employee_age: 0,
           profile_image: "",
         }
-      
       console.log(this.employee);
+     
+  }
+
+  handleKeyboardEvent(event: KeyboardEvent) {
+    let target = event.target as HTMLInputElement;
+    if(event.keyCode === 9 && target.id === "returnB"){
+      event.preventDefault();
+      document.querySelector("input").focus();
+      //this.E1Input.setFocus(); 
+      //console.log(event);
+    }
   }
 
   ionViewDidLoad() {
