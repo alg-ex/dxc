@@ -14,9 +14,10 @@ import { EmployeeProvider } from '../../providers/employee/employee';
 @Component({
   selector: 'page-employee-detail',
   templateUrl: 'employee-detail.html',
-  /*host: {
-    '(document:keydown)': 'handleKeyboardEvent($event)'
-  }*/
+  host: {
+    //'(document:keydown)': 'handleKeyboardEvent($event)'
+    '(document:focusin)': 'onFocusIn($event)'
+  }
 })
 export class EmployeeDetailPage {
 
@@ -50,6 +51,14 @@ export class EmployeeDetailPage {
         }
       console.log(this.employee);
      
+  }
+
+  onFocusIn(event:KeyboardEvent) {
+    let target = event.target as HTMLInputElement;
+    if (!target.closest(".modalContent")){
+      event.preventDefault();
+      document.querySelector("input").focus();
+    }
   }
 
   handleKeyboardEvent(event: KeyboardEvent) {

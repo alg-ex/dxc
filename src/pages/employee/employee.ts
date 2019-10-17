@@ -15,9 +15,9 @@ import { EmployeeDetailPage } from '../employee-detail/employee-detail';
 @Component({
   selector: 'page-employee',
   templateUrl: 'employee.html',
-  host: {
+  /*host: {
     '(document:focusin)': 'onFocusIn($event)'
-  }
+  }*/
 })
 export class EmployeePage {
 
